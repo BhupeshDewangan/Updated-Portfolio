@@ -619,7 +619,7 @@ p {
 
 	.skills .skills-icons svg {
 		margin: 0.3rem;
-		width: 40px;
+/* 		width: 40px; */
 	  }
 	  .skills .skills-icons li {
 		transition: 0.3s;
