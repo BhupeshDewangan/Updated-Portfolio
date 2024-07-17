@@ -128,15 +128,35 @@ p {
   z-index: 100;
 }
 
+
+.li-desc
+  {
+    font-size: 1.6rem;
+  }
+
+
+
 @media only screen and (max-width: 805px) {
+
+  /* html
+  {
+    font-size: 1.3rem;
+  } */
+
+  
+
   .primary-btn {
     font-size: 1.3rem;
   }
 }
 @media only screen and (max-width: 390px) {
+
+
   .primary-btn {
     font-size: 1.1rem;
   }
+  
+  
 }
 
 
@@ -464,8 +484,6 @@ p {
 
 
 
-
-
 /* Skill section */
 
     
@@ -598,7 +616,7 @@ p {
   /* _____________media query for 490px size_____________  */
 
   @media (max-width: 490px) {
-    C
+
 	.skills .skills-icons svg {
 		margin: 0.3rem;
 		width: 40px;
@@ -669,6 +687,12 @@ p {
 	margin-bottom: 3rem;
   margin-top: 3rem;
 }
+
+
+#projects .item .right .project-desc .li-desc {
+  font-size: 1.6rem;
+}
+
 #projects .item .right .external-link {
 	display: flex;
 	align-items: center;
@@ -676,20 +700,41 @@ p {
 	gap: 1rem;
 	padding: calc(0.6em - 4px) calc(1.6em - 4px);
 }
+
+
 #projects .item .right .external-link svg {
 	width: 25px;
 }
 
+
+
 @media only screen and (max-width: 470px) {
   #projects .item .right .project-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  #projects .item .right .project-sub-title .li-desc{
-    font-size: 1.2rem;
+
+
+  #projects .item .right {
+    padding: 2rem 3rem;
   }
-    #projects .item .right {
+  
+  li.li-desc
+  {
+    font-size: 1rem;
+  }
+
+  #projects .item .right .project-desc .li-desc  {
+    font-size: 1rem;
+  }
+
+  #projects .item .right .project-sub-title{
+    font-size: 1rem;
+  }
+    /* #projects .item .right {
         padding: 2.5rem 5rem;
-    }
+    } */
+
+
     #projects .item .right .project-desc {
         display: none;
     }
