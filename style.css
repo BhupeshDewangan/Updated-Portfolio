@@ -27,7 +27,7 @@ html {
 body {
   background-color: var(--body-bg);
   scroll-behavior: smooth;
-	width: 67vw; ///
+
 }
 img {
   width: 13rem;
@@ -44,7 +44,7 @@ section {
 }
 
 .container {
-  width: 100%;  // 90
+  width: 90%;  // 90
   margin: 0 auto;
   max-width: 1800px;
 }
