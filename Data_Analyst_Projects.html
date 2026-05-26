@@ -1,191 +1,764 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Portfolio </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analyst Projects | Bhupesh Dewangan</title>
+  <meta name="description" content="Data analyst projects by Bhupesh Dewangan featuring SQL, Power BI, Excel, BigQuery, Looker Studio, and statistical analysis." />
 
-  <!-- <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"> -->
-  <link rel="shortcut icon" href="/iconsportfolio.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <style>
+    :root,[data-theme="light"]{
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
 
-   <!-- Fonts -->
-  
-      <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Asap Condensed' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Donegal One' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Gelasio' rel='stylesheet'>
-  
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
 
-      <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
-    
-       <!-- Font Awesome icons -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous"
-  />
+      --color-bg: #f7f6f2;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #ffffff;
+      --color-surface-offset: #efece6;
+      --color-border: #d7d2ca;
+      --color-text: #1f221f;
+      --color-text-muted: #666b66;
+      --color-text-faint: #929791;
+      --color-primary: #0b6b6f;
+      --color-primary-hover: #084f53;
+      --color-primary-highlight: #d5e5e4;
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+      --radius-sm: 0.5rem;
+      --radius-md: 0.875rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --radius-full: 9999px;
 
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 24px rgba(11,36,40,0.08);
+      --shadow-lg: 0 20px 50px rgba(11,36,40,0.12);
+
+      --content-default: 1160px;
+      --transition: 180ms cubic-bezier(0.16,1,0.3,1);
+
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+      --font-display: 'Boska', Georgia, serif;
+    }
+
+    [data-theme="dark"]{
+      --color-bg: #151614;
+      --color-surface: #1b1d1b;
+      --color-surface-2: #202321;
+      --color-surface-offset: #252927;
+      --color-border: #343936;
+      --color-text: #edf0ec;
+      --color-text-muted: #b3b9b2;
+      --color-text-faint: #7d847c;
+      --color-primary: #69aeb2;
+      --color-primary-hover: #8bc4c7;
+      --color-primary-highlight: #223536;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.18);
+      --shadow-md: 0 10px 24px rgba(0,0,0,0.28);
+      --shadow-lg: 0 20px 50px rgba(0,0,0,0.36);
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{
+      scroll-behavior:smooth;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      text-size-adjust:none;
+    }
+    body{
+      min-height:100vh;
+      font-family:var(--font-body);
+      font-size:var(--text-base);
+      line-height:1.6;
+      color:var(--color-text);
+      background:
+        radial-gradient(circle at top right, rgba(11,107,111,0.08), transparent 28%),
+        linear-gradient(180deg, var(--color-bg), var(--color-surface));
+    }
+    img,svg{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit;cursor:pointer;background:none;border:none}
+    ul{list-style:none}
+    :focus-visible{
+      outline:2px solid var(--color-primary);
+      outline-offset:3px;
+      border-radius:var(--radius-sm);
+    }
+
+    .container{
+      width:min(calc(100% - 2rem), var(--content-default));
+      margin-inline:auto;
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(247,246,242,0.85);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+    [data-theme="dark"] .header{
+      background:rgba(21,22,20,0.82);
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:1rem 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:0.85rem;
+      min-height:44px;
+    }
+    .brand-mark{
+      width:2.6rem;
+      height:2.6rem;
+      border-radius:0.9rem;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:linear-gradient(135deg, var(--color-primary), #4fb8bb);
+      box-shadow:var(--shadow-md);
+      font-weight:700;
+      font-size:var(--text-sm);
+    }
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    .brand-copy strong{font-size:var(--text-sm)}
+    .brand-copy span{font-size:var(--text-xs);color:var(--color-text-muted)}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+    }
+    .nav-links a{
+      padding:0.7rem 0.95rem;
+      border-radius:999px;
+      min-height:44px;
+      display:inline-flex;
+      align-items:center;
+      color:var(--color-text-muted);
+      font-size:var(--text-sm);
+      font-weight:600;
+    }
+    .nav-links a:hover,
+    .nav-links a.active{
+      background:rgba(11,107,111,0.08);
+      color:var(--color-text);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:0.75rem;
+    }
+
+    .theme-toggle{
+      width:2.75rem;
+      height:2.75rem;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:var(--color-surface);
+      border:1px solid rgba(0,0,0,0.08);
+      box-shadow:var(--shadow-sm);
+      color:var(--color-text);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:0.6rem;
+      min-height:46px;
+      padding:0.9rem 1.2rem;
+      border-radius:999px;
+      font-size:var(--text-sm);
+      font-weight:700;
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:var(--color-primary);
+      color:#fff;
+      box-shadow:var(--shadow-md);
+    }
+    .btn-primary:hover{background:var(--color-primary-hover)}
+    .btn-secondary{
+      background:var(--color-surface);
+      border:1px solid rgba(0,0,0,0.08);
+      color:var(--color-text);
+    }
+
+    .hero{
+      padding-block:clamp(4.5rem, 10vw, 7rem) clamp(2.5rem, 6vw, 4rem);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:2rem;
+      align-items:end;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:0.5rem;
+      padding:0.5rem 0.85rem;
+      border-radius:999px;
+      background:var(--color-primary-highlight);
+      color:var(--color-primary);
+      font-size:var(--text-xs);
+      font-weight:700;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+    }
+    .hero h1{
+      margin-top:1.2rem;
+      font-family:var(--font-display);
+      font-size:var(--text-2xl);
+      line-height:0.98;
+      letter-spacing:-0.03em;
+      max-width:11ch;
+    }
+    .hero p{
+      margin-top:1.1rem;
+      color:var(--color-text-muted);
+      max-width:62ch;
+    }
+    .hero-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.78), var(--color-surface));
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:var(--radius-xl);
+      padding:1.5rem;
+      box-shadow:var(--shadow-lg);
+    }
+    [data-theme="dark"] .hero-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), var(--color-surface));
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero-panel h2{
+      font-size:var(--text-lg);
+      margin-bottom:0.75rem;
+    }
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:0.85rem;
+      margin-top:1rem;
+    }
+    .stat{
+      background:var(--color-surface-2);
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:1rem;
+      padding:1rem;
+    }
+    .stat span{
+      display:block;
+      font-size:var(--text-xs);
+      color:var(--color-text-muted);
+      text-transform:uppercase;
+      letter-spacing:0.05em;
+      margin-bottom:0.35rem;
+    }
+    .stat strong{
+      font-size:var(--text-base);
+    }
+
+    .projects-section{
+      padding-bottom:clamp(4rem, 8vw, 6rem);
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:1rem;
+      margin-bottom:2rem;
+    }
+    .section-head h2{
+      font-family:var(--font-display);
+      font-size:var(--text-xl);
+      line-height:1;
+    }
+    .section-head p{
+      color:var(--color-text-muted);
+      max-width:58ch;
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1.25rem;
+    }
+
+    .project-card{
+      display:flex;
+      flex-direction:column;
+      gap:1.1rem;
+      padding:1.5rem;
+      background:linear-gradient(180deg, var(--color-surface), color-mix(in oklab, var(--color-surface-offset) 62%, white 38%));
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:1.6rem;
+      box-shadow:var(--shadow-md);
+      transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      content-visibility:auto;
+    }
+    .project-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-lg);
+      border-color:rgba(11,107,111,0.18);
+    }
+    [data-theme="dark"] .project-card{
+      background:linear-gradient(180deg, var(--color-surface), var(--color-surface-offset));
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .project-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+      gap:1rem;
+    }
+    .project-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      font-size:var(--text-xs);
+      font-weight:700;
+      color:var(--color-primary);
+      letter-spacing:0.05em;
+      text-transform:uppercase;
+    }
+    .project-index{
+      font-size:var(--text-xs);
+      color:var(--color-text-faint);
+      font-weight:700;
+    }
+
+    .project-title{
+      font-size:var(--text-lg);
+      line-height:1.2;
+      margin-top:0.2rem;
+      max-width:24ch;
+    }
+    .project-sub-title{
+      color:var(--color-text-muted);
+      font-size:var(--text-sm);
+      line-height:1.5;
+    }
+
+    .project-desc{
+      display:grid;
+      gap:0.8rem;
+    }
+    .project-desc li{
+      position:relative;
+      padding-left:1.15rem;
+      color:var(--color-text-muted);
+    }
+    .project-desc li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0.68rem;
+      width:0.42rem;
+      height:0.42rem;
+      border-radius:50%;
+      background:var(--color-primary);
+    }
+
+    .tech-stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.55rem;
+    }
+    .tech-stack span{
+      padding:0.48rem 0.72rem;
+      border-radius:999px;
+      background:rgba(11,107,111,0.08);
+      border:1px solid rgba(11,107,111,0.14);
+      font-size:var(--text-xs);
+      font-weight:700;
+      color:var(--color-text);
+    }
+
+    .card-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.75rem;
+      margin-top:auto;
+      padding-top:0.5rem;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity 600ms cubic-bezier(0.16,1,0.3,1), transform 600ms cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .projects-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        flex-wrap:wrap;
+      }
+      .nav-links{
+        width:100%;
+        order:3;
+        overflow:auto;
+        padding-bottom:0.25rem;
+      }
+      .nav-links::-webkit-scrollbar{display:none}
+      .section-head{
+        flex-direction:column;
+        align-items:start;
+      }
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{
+        opacity:1;
+        transform:none;
+        transition:none;
+      }
+      .project-card:hover,
+      .btn:hover{
+        transform:none;
+      }
+    }
+  </style>
 </head>
-
 <body>
-     <!-- Projects -->
-     <section id="projects">
-        <div class="container">
-          <h2 class="section-heading" data-outline="Projects" id="pbot">Projects</h2>
-          <div class="all-items">
+  <header class="header">
+    <div class="container nav">
+      <a href="./index.html" class="brand" aria-label="Bhupesh Dewangan home">
+        <div class="brand-mark">BD</div>
+        <div class="brand-copy">
+          <strong>Bhupesh Dewangan</strong>
+          <span>Data Analyst Projects</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./index.html">Home</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="#projects" class="active">Projects</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <span class="eyebrow"><i class="fa-solid fa-chart-column"></i> Analytics portfolio</span>
+          <h1>Analytical projects built around data, decisions, and measurable insight.</h1>
+          <p>
+            This page highlights portfolio work across SQL, Excel, Power BI, BigQuery, Looker Studio, statistics,
+            and business analysis. The content is the same as your original projects, but redesigned into a cleaner,
+            more professional portfolio experience.
+          </p>
+        </div>
+
+        <aside class="hero-panel reveal">
+          <h2>Project themes</h2>
+          <p style="color:var(--color-text-muted);">
+            Marketing analytics, churn modeling, business intelligence, SQL exploration, hypothesis testing,
+            dashboarding, and data-backed decision support.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span>Tools</span>
+              <strong>SQL, BI, Excel</strong>
+            </div>
+            <div class="stat">
+              <span>Focus</span>
+              <strong>Insight generation</strong>
+            </div>
+            <div class="stat">
+              <span>Methods</span>
+              <strong>Stats + dashboards</strong>
+            </div>
+            <div class="stat">
+              <span>Style</span>
+              <strong>Business-ready storytelling</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Selected projects</h2>
+          </div>
+          <p>
+            These cards preserve your original work while improving readability, structure, and recruiter-facing presentation.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-bullhorn"></i> Marketing analytics</div>
+              <div class="project-index">01</div>
+            </div>
+            <div>
+              <h3 class="project-title">Marketing Campaign Analysis (FB vs AdWords)</h3>
+              <p class="project-sub-title">Google Colab, hypothesis testing, regression, time series analysis</p>
+            </div>
+            <ul class="project-desc">
+              <li>Applied regression, Random Forest, and ensemble learning to analyze campaign performance and reached 76% prediction accuracy for conversion rates.</li>
+              <li>Found a strong 0.87 correlation between Facebook ad clicks and conversions, supporting more data-driven spending decisions.</li>
+              <li>Used hypothesis testing to compare Facebook and AdWords performance and support smarter budget allocation.</li>
+              <li>Analyzed weekday conversion behavior and found stronger performance on Mondays and Tuesdays for campaign planning.</li>
+              <li>Identified lower CPC periods, including May and November, to support more cost-effective ad scheduling.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Regression</span><span>Hypothesis Testing</span><span>Time Series</span><span>Marketing Data</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Marketing_Compaign_Analyis" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Marketing_Compaign_Analyis" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-users-viewfinder"></i> Churn prediction</div>
+              <div class="project-index">02</div>
+            </div>
+            <div>
+              <h3 class="project-title">Pilot Program for Churn Model</h3>
+              <p class="project-sub-title">BigQuery, Python, Looker Studio</p>
+            </div>
+            <ul class="project-desc">
+              <li>Built an AutoML pilot workflow to predict employee churn using integrated datasets with 15K+ rows.</li>
+              <li>Used BigQuery for merging and transforming multi-source data, then trained models in notebooks with PyCaret.</li>
+              <li>Selected a Random Forest model with reported 99% accuracy and built dashboards in Looker Studio for KPI tracking and churn insights.</li>
+              <li>Identified satisfaction level as the strongest factor and highlighted technical and support teams as higher-risk departments.</li>
+              <li>Reported an overall churn rate of 7% to support strategic HR decision-making.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>BigQuery</span><span>PyCaret</span><span>Looker Studio</span><span>Random Forest</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Churn-Model-for-Pilot-Program" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Churn-Model-for-Pilot-Program" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-taxi"></i> Revenue analysis</div>
+              <div class="project-index">03</div>
+            </div>
+            <div>
+              <h3 class="project-title">Maximizing Revenue for Drivers</h3>
+              <p class="project-sub-title">Statistics, hypothesis testing in Python, Google Colab</p>
+            </div>
+            <ul class="project-desc">
+              <li>Used statistical analysis and hypothesis testing to identify revenue-maximizing strategies for taxi drivers.</li>
+              <li>Performed core preprocessing tasks such as duplicate filtering and null-value handling to improve reliability.</li>
+              <li>Analyzed payment behavior using charts and found a split of 67.3% card and 32.7% cash transactions.</li>
+              <li>Used visual analysis and cleaned data to support more meaningful statistical conclusions and operational insights.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Python</span><span>Statistics</span><span>Hypothesis Testing</span><span>EDA</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Taxi-Revenue-Data-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Taxi-Revenue-Data-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-palette"></i> SQL exploration</div>
+              <div class="project-index">04</div>
+            </div>
+            <div>
+              <h3 class="project-title">Famous Painting Analysis</h3>
+              <p class="project-sub-title">SQL project, pgAdmin, MS Excel, data manipulation</p>
+            </div>
+            <ul class="project-desc">
+              <li>Used SQL joins, group by, and window functions to analyze artworks, artists, museums, pricing patterns, and location trends.</li>
+              <li>Identified dominant styles such as Impressionism and highlighted artists like Renoir, Monet, and Van Gogh.</li>
+              <li>Extracted 20+ insights related to pricing, market demand, consumer behavior, and museum accessibility.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>SQL</span><span>pgAdmin</span><span>Excel</span><span>Window Functions</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/SQL_Paintings" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/SQL_Paintings" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-chart-pie"></i> BI dashboard</div>
+              <div class="project-index">05</div>
+            </div>
+            <div>
+              <h3 class="project-title">Customer Churn Analysis</h3>
+              <p class="project-sub-title">Power BI, MS Excel, DAX, data transformation, visualization</p>
+            </div>
+            <ul class="project-desc">
+              <li>Built a churn analysis dashboard in Power BI using transformed data, reference tables, and DAX-driven calculations.</li>
+              <li>Created pie, line, and bar charts to improve understanding of churn segments and patterns.</li>
+              <li>Found key churn characteristics across gender, activity status, credit card ownership, and country-level distribution.</li>
+              <li>Reported churn share breakdowns including 44% female and 56% male among churned customers, with country-specific churn patterns across Spain, Germany, and France.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Power BI</span><span>DAX</span><span>Excel</span><span>Dashboarding</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Bank_Customer_Churn_PowerBI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Bank_Customer_Churn_PowerBI" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-mug-hot"></i> Excel dashboard</div>
+              <div class="project-index">06</div>
+            </div>
+            <div>
+              <h3 class="project-title">Coffee Sales Analysis</h3>
+              <p class="project-sub-title">MS Excel, pivot tables, data modeling, data visualization</p>
+            </div>
+            <ul class="project-desc">
+              <li>Presented this project as an Excel-based sales dashboard and analysis portfolio piece using pivot tables and visual summaries.</li>
+              <li>Your pasted description appears to repeat the painting-analysis text, so this card keeps the project category but should be updated with the real coffee-sales outcomes.</li>
+              <li>Once you share the actual coffee project details, this section can be rewritten to match the accuracy and polish of the other cards.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Excel</span><span>Pivot Tables</span><span>Dashboarding</span><span>Sales Analysis</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Coffee_Sales_Dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Coffee_Sales_Dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<script>
+  const root = document.documentElement;
+  const toggle = document.querySelector('[data-theme-toggle]');
   
+  // Changed: Always default to 'light' instead of checking system preferences
+  let theme = 'light';
 
-            
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Marketing Campaign Analysis (FB vs AdWords) </h2>
-                <h3 class="project-sub-title">(Google Colab, Hypothesis Testing, Regression & Time Series Analysis) </h3>
-                <p class="project-desc">
+  function setTheme(mode) {
+    theme = mode;
+    root.setAttribute('data-theme', mode);
+    toggle.innerHTML = mode === 'light'
+      ? '<i class="fa-regular fa-sun"></i>'
+      : '<i class="fa-regular fa-moon"></i>';
+    toggle.setAttribute('aria-label', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
 
-                  <li class= "li-desc"> Accomplished a 76% prediction accuracy in ad conversion rates, by applying Linear Regression, Random Forest, and Ensemble Learning to analyze and optimize marketing campaign data. </li>
-                  <br>
-                  <li class= "li-desc">Enhanced campaign insights with a 0.87 correlation coefficient between Facebook ad clicks and conversions, demonstrating a strong linear relationship that supports data-driven decisions for ad spend and click strategies.</li> 
-                  <br>
-                  <li class= "li-desc">Improved ROI and cost-effectiveness of ad campaigns, by conducting hypothesis testing that demonstrated Facebook’s superior conversion rates over AdWords, leading to more strategic budget allocation.</li> 
-                  <br>
-                  <li class= "li-desc">Demonstrated consistent engagement throughout the week, by analyzing conversion rates across weekdays and finding that Mondays and Tuesdays exhibit the highest conversion rates, informing day-specific marketing strategies.</li> 
-                  <br>
-                  <li class= "li-desc">Identified cost-effective advertising periods, by analyzing CPC trends and recognizing lower CPC months (May and November) as opportunities for maximizing budget efficiency and return on investment.</li> 
-                </p>
-                  <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Marketing_Compaign_Analyis" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Marketing_Compaign_Analyis" class="primary-btn outline external-link"> <span>Preview</span>
-                </a>
-                </div>
-              </div>
-            </div>
+  setTheme(theme);
+  toggle.addEventListener('click', () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  });
 
-          
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Pilot Program For Churn Model</h2>
-                <h3 class="project-sub-title">(Big Query, Python and Looker Studio) </h3>
-                <p class="project-desc">
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
 
-                  <li class= "li-desc"> Led the creation of an AutoML model for a pilot program predicting employee churn. Leveraged Google Cloud's BigQuery for data integration and manipulation, handling 15K+ data rows to enhance model accuracy. </li>
-                  <br>
-                  <li class= "li-desc">Utilized BigQuery in Google Cloud Platform to merge and manipulate data from multiple sources. Employed IPython notebooks to connect with BigQuery, applying Pycaret for model training, achieving 99% accuracy with Random Forest model selection.</li> 
-                  <br>
-                  <li class= "li-desc">Developed dashboards using Looker Studio that included custom KPIs and visualizations. Identified satisfaction level as the most crucial factor, highlighting technical and support departments with the highest churn rates. Overall churn rate revealed to be 7%, informing strategic HR decisions.</li> 
-                </p>
-                  <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Churn-Model-for-Pilot-Program" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Churn-Model-for-Pilot-Program" class="primary-btn outline external-link"> <span>Preview</span>
-                </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Maximizing Revenue For Drivers</h2>
-                <h3 class="project-sub-title"> (Statistics and Hypothesis in Python, Google Colab)</h3>
-                <p class="project-desc">
-                  
-                   <li class= "li-desc"> Employed statistical analysis and hypothesis testing in Python to identify revenue-maximizing strategies for taxi drivers. Conducted data preprocessing steps, including filtering duplicates and removing null values, to ensure data accuracy. </li>
-                  <br>
-                  <li class= "li-desc"> Utilized stacked horizontal bar charts and pie charts to analyze the ratio between primary payment methods which is Card and Cash (67.3 & 32.7)%. Enabled visualization of payment method distribution, aiding in identifying dominant payment channels and potential areas for improvement.</li> 
-                  <br>
-                  <li class= "li-desc"> Applied filtering techniques to remove duplicate values and handled null values effectively. Ensured data integrity and accuracy, laying a solid foundation for meaningful statistical analysis and hypothesis testing. </li> 
-
-                </p>
-                  <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Taxi-Revenue-Data-Analysis" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Taxi-Revenue-Data-Analysis" class="primary-btn outline external-link"> <span>Preview</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Famous Painting Analysis</h2>
-                <h3 class="project-sub-title">(SQL Project, PG Admin, MS Excel, Data Manipulation)</h3>
-                <p class="project-desc">
-                  
-                  <li class= "li-desc"> Utilized SQL queries, including window functions, group by, and joins, to extract insights on artworks, artists, museums, pricing trends, and geographical distributions, informing strategic decisions.</li>
-                  <br>
-                  <li class= "li-desc">Rediscovered dominant painting styles like Impressionism and identified prolific artists like Renoir, Monet, and Van Gogh, providing insights into art market dynamics and preferences.</li> 
-                  <br>
-                  <li class= "li-desc">Investigated pricing differentials, consumer behavior, and museum opening hours, revealing key findings: 20+ insights, including pricing trends, market demand insights, and accessibility commitments.</li> 
-
-                </p>
-                  <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/SQL_Paintings" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/SQL_Paintings" class="primary-btn outline external-link"> <span>Preview</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Customer Churn Analysis</h2>
-                <h3 class="project-sub-title">(Power BI, MS Excel, DAX, Data Transform, Visualization)</h3>
-                <p class="project-desc">
-                  
-                  <li class= "li-desc"> Spearheaded the analysis of Customer churn using Power BI. Transformed data, established reference tables, and implemented DAX for visualization, uncovering insights to inform strategic decisions.</li>
-                  <br>
-                  <li class= "li-desc">Developed pie charts for customer segmentation and line/bar plots for churn rate analysis, leveraging Power BI's capabilities. Enhanced understanding of data patterns, facilitating informed decision-making for retention strategies.</li> 
-                  <br>
-                  <li class= "li-desc">Discovered gender distribution (44% female, 56% male) among churned customers, activity status (52% active, 48% inactive), credit card usage (30% none, 70% with), and country-specific churn rates (24% Spain, 25% Germany, 51% France) Insights for retention strategies.</li> 
-
-                </p>
-                  <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Bank_Customer_Churn_PowerBI" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Bank_Customer_Churn_PowerBI" class="primary-btn outline external-link"> <span>Preview</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Coffee Sales Analysis</h2>
-                <h3 class="project-sub-title">(MS Excel, Pivot Table, Data Modeling, Data Visualization)</h3>
-                <p class="project-desc">
-                  
-                  <li class= "li-desc"> Utilized SQL queries, including window functions, group by, and joins, to extract insights on artworks, artists, museums, pricing trends, and geographical distributions, informing strategic decisions.</li>
-                  <br>
-                  <li class= "li-desc">Rediscovered dominant painting styles like Impressionism and identified prolific artists like Renoir, Monet, and Van Gogh, providing insights into art market dynamics and preferences.</li> 
-                  <br>
-                  <li class= "li-desc">Investigated pricing differentials, consumer behavior, and museum opening hours, revealing key findings: 20+ insights, including pricing trends, market demand insights, and accessibility commitments.</li> 
-
-                </p>
-                  <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Coffee_Sales_Dashboard" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Coffee_Sales_Dashboard" class="primary-btn outline external-link"> <span>Preview</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-      
-    
-            
-      
-          </div> <!-- end of all-items -->
-        </div> <!-- end of container--->
-      </section>
-
-
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

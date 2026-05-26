@@ -1,113 +1,676 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Portfolio </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Projects | Bhupesh Dewangan</title>
+  <meta name="description" content="Software engineering and web development projects by Bhupesh Dewangan." />
 
-  <!-- <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"> -->
-  <link rel="shortcut icon" href="/iconsportfolio.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <style>
+    :root,[data-theme="light"]{
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
 
-   <!-- Fonts -->
-  
-      <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Asap Condensed' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Donegal One' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Gelasio' rel='stylesheet'>
-  
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
 
-      <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
-    
-       <!-- Font Awesome icons -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous"
-  />
+      --color-bg: #f7f6f2;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #ffffff;
+      --color-surface-offset: #efece6;
+      --color-border: #d7d2ca;
+      --color-text: #1f221f;
+      --color-text-muted: #666b66;
+      --color-text-faint: #929791;
+      --color-primary: #0b6b6f;
+      --color-primary-hover: #084f53;
+      --color-primary-highlight: #d5e5e4;
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+      --radius-sm: 0.5rem;
+      --radius-md: 0.875rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --radius-full: 9999px;
 
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 24px rgba(11,36,40,0.08);
+      --shadow-lg: 0 20px 50px rgba(11,36,40,0.12);
+
+      --content-default: 1160px;
+      --transition: 180ms cubic-bezier(0.16,1,0.3,1);
+
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+      --font-display: 'Boska', Georgia, serif;
+    }
+
+    [data-theme="dark"]{
+      --color-bg: #151614;
+      --color-surface: #1b1d1b;
+      --color-surface-2: #202321;
+      --color-surface-offset: #252927;
+      --color-border: #343936;
+      --color-text: #edf0ec;
+      --color-text-muted: #b3b9b2;
+      --color-text-faint: #7d847c;
+      --color-primary: #69aeb2;
+      --color-primary-hover: #8bc4c7;
+      --color-primary-highlight: #223536;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.18);
+      --shadow-md: 0 10px 24px rgba(0,0,0,0.28);
+      --shadow-lg: 0 20px 50px rgba(0,0,0,0.36);
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{
+      scroll-behavior:smooth;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      text-size-adjust:none;
+    }
+    body{
+      min-height:100vh;
+      font-family:var(--font-body);
+      font-size:var(--text-base);
+      line-height:1.6;
+      color:var(--color-text);
+      background:
+        radial-gradient(circle at top right, rgba(11,107,111,0.08), transparent 28%),
+        linear-gradient(180deg, var(--color-bg), var(--color-surface));
+    }
+    img,svg{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit;cursor:pointer;background:none;border:none}
+    ul{list-style:none}
+    :focus-visible{
+      outline:2px solid var(--color-primary);
+      outline-offset:3px;
+      border-radius:var(--radius-sm);
+    }
+
+    .container{
+      width:min(calc(100% - 2rem), var(--content-default));
+      margin-inline:auto;
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(247,246,242,0.85);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+    [data-theme="dark"] .header{
+      background:rgba(21,22,20,0.82);
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:1rem 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:0.85rem;
+      min-height:44px;
+    }
+    .brand-mark{
+      width:2.6rem;
+      height:2.6rem;
+      border-radius:0.9rem;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:linear-gradient(135deg, var(--color-primary), #4fb8bb);
+      box-shadow:var(--shadow-md);
+      font-weight:700;
+      font-size:var(--text-sm);
+    }
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    .brand-copy strong{font-size:var(--text-sm)}
+    .brand-copy span{font-size:var(--text-xs);color:var(--color-text-muted)}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+    }
+    .nav-links a{
+      padding:0.7rem 0.95rem;
+      border-radius:999px;
+      min-height:44px;
+      display:inline-flex;
+      align-items:center;
+      color:var(--color-text-muted);
+      font-size:var(--text-sm);
+      font-weight:600;
+    }
+    .nav-links a:hover,
+    .nav-links a.active{
+      background:rgba(11,107,111,0.08);
+      color:var(--color-text);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:0.75rem;
+    }
+
+    .theme-toggle{
+      width:2.75rem;
+      height:2.75rem;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:var(--color-surface);
+      border:1px solid rgba(0,0,0,0.08);
+      box-shadow:var(--shadow-sm);
+      color:var(--color-text);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:0.6rem;
+      min-height:46px;
+      padding:0.9rem 1.2rem;
+      border-radius:999px;
+      font-size:var(--text-sm);
+      font-weight:700;
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:var(--color-primary);
+      color:#fff;
+      box-shadow:var(--shadow-md);
+    }
+    .btn-primary:hover{background:var(--color-primary-hover)}
+    .btn-secondary{
+      background:var(--color-surface);
+      border:1px solid rgba(0,0,0,0.08);
+      color:var(--color-text);
+    }
+
+    .hero{
+      padding-block:clamp(4.5rem, 10vw, 7rem) clamp(2.5rem, 6vw, 4rem);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:2rem;
+      align-items:end;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:0.5rem;
+      padding:0.5rem 0.85rem;
+      border-radius:999px;
+      background:var(--color-primary-highlight);
+      color:var(--color-primary);
+      font-size:var(--text-xs);
+      font-weight:700;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+    }
+    .hero h1{
+      margin-top:1.2rem;
+      font-family:var(--font-display);
+      font-size:var(--text-2xl);
+      line-height:0.98;
+      letter-spacing:-0.03em;
+      max-width:11ch;
+    }
+    .hero p{
+      margin-top:1.1rem;
+      color:var(--color-text-muted);
+      max-width:62ch;
+    }
+    .hero-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.78), var(--color-surface));
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:var(--radius-xl);
+      padding:1.5rem;
+      box-shadow:var(--shadow-lg);
+    }
+    [data-theme="dark"] .hero-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), var(--color-surface));
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero-panel h2{
+      font-size:var(--text-lg);
+      margin-bottom:0.75rem;
+    }
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:0.85rem;
+      margin-top:1rem;
+    }
+    .stat{
+      background:var(--color-surface-2);
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:1rem;
+      padding:1rem;
+    }
+    .stat span{
+      display:block;
+      font-size:var(--text-xs);
+      color:var(--color-text-muted);
+      text-transform:uppercase;
+      letter-spacing:0.05em;
+      margin-bottom:0.35rem;
+    }
+    .stat strong{
+      font-size:var(--text-base);
+    }
+
+    .projects-section{
+      padding-bottom:clamp(4rem, 8vw, 6rem);
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:1rem;
+      margin-bottom:2rem;
+    }
+    .section-head h2{
+      font-family:var(--font-display);
+      font-size:var(--text-xl);
+      line-height:1;
+    }
+    .section-head p{
+      color:var(--color-text-muted);
+      max-width:58ch;
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1.25rem;
+    }
+
+    .project-card{
+      display:flex;
+      flex-direction:column;
+      gap:1.1rem;
+      padding:1.5rem;
+      background:linear-gradient(180deg, var(--color-surface), color-mix(in oklab, var(--color-surface-offset) 62%, white 38%));
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:1.6rem;
+      box-shadow:var(--shadow-md);
+      transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      content-visibility:auto;
+    }
+    .project-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-lg);
+      border-color:rgba(11,107,111,0.18);
+    }
+    [data-theme="dark"] .project-card{
+      background:linear-gradient(180deg, var(--color-surface), var(--color-surface-offset));
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .project-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+      gap:1rem;
+    }
+    .project-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      font-size:var(--text-xs);
+      font-weight:700;
+      color:var(--color-primary);
+      letter-spacing:0.05em;
+      text-transform:uppercase;
+    }
+    .project-index{
+      font-size:var(--text-xs);
+      color:var(--color-text-faint);
+      font-weight:700;
+    }
+
+    .project-title{
+      font-size:var(--text-lg);
+      line-height:1.2;
+      margin-top:0.2rem;
+      max-width:24ch;
+    }
+    .project-sub-title{
+      color:var(--color-text-muted);
+      font-size:var(--text-sm);
+      line-height:1.5;
+    }
+
+    .project-desc{
+      display:grid;
+      gap:0.8rem;
+    }
+    .project-desc li{
+      position:relative;
+      padding-left:1.15rem;
+      color:var(--color-text-muted);
+    }
+    .project-desc li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0.68rem;
+      width:0.42rem;
+      height:0.42rem;
+      border-radius:50%;
+      background:var(--color-primary);
+    }
+
+    .tech-stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.55rem;
+    }
+    .tech-stack span{
+      padding:0.48rem 0.72rem;
+      border-radius:999px;
+      background:rgba(11,107,111,0.08);
+      border:1px solid rgba(11,107,111,0.14);
+      font-size:var(--text-xs);
+      font-weight:700;
+      color:var(--color-text);
+    }
+
+    .card-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.75rem;
+      margin-top:auto;
+      padding-top:0.5rem;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity 600ms cubic-bezier(0.16,1,0.3,1), transform 600ms cubic-bezier(0.16,1,0.3,1);
+    }
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .projects-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        flex-wrap:wrap;
+      }
+      .nav-links{
+        width:100%;
+        order:3;
+        overflow:auto;
+        padding-bottom:0.25rem;
+      }
+      .nav-links::-webkit-scrollbar{display:none}
+      .section-head{
+        flex-direction:column;
+        align-items:start;
+      }
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{
+        opacity:1;
+        transform:none;
+        transition:none;
+      }
+      .project-card:hover,
+      .btn:hover{
+        transform:none;
+      }
+    }
+  </style>
 </head>
-
 <body>
-     <!-- Projects -->
-     <section id="projects">
-        <div class="container">
-          <h2 class="section-heading" data-outline="Projects" id="pbot">Projects</h2>
-          <div class="all-items">
-    
-    
+  <header class="header">
+    <div class="container nav">
+      <a href="./index.html" class="brand" aria-label="Bhupesh Dewangan home">
+        <div class="brand-mark">BD</div>
+        <div class="brand-copy">
+          <strong>Bhupesh Dewangan</strong>
+          <span>Software Projects</span>
+        </div>
+      </a>
 
-    
-    
-  
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Personal Portfolio</h2>
-                <h3 class="project-sub-title">A Web Development Project </h3>
-                <p class="project-desc">Don't Need Much Info About It, Just Scroll Down. You're Here Only! The Main purpose of this Webpage to present My Skills and Projects to others, I hope This will give me more opportunities and contacts. </p>
-                <div class="buttons">
-                  <a href="./index.html" class="primary-btn">Know More</a>
-                  <a href="./index.html" class="primary-btn outline external-link"> <span>Preview</span>
-                
-                  </a>
-                </div>
-              </div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./index.html">Home</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="#projects" class="active">Projects</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <span class="eyebrow"><i class="fa-solid fa-code"></i> Engineering projects</span>
+          <h1>Software projects focused on usability, logic, and practical implementation.</h1>
+          <p>
+            This page highlights your software engineering and web development work in a cleaner, more professional format.
+            The same design language has been carried across your portfolio so all project pages feel visually connected.
+          </p>
+        </div>
+
+        <aside class="hero-panel reveal">
+          <h2>Project focus</h2>
+          <p style="color:var(--color-text-muted);">
+            Personal web presence, Django-based application development, desktop GUI projects, and problem-solving oriented builds.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span>Area</span>
+              <strong>Web + software</strong>
             </div>
-
-
-
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Advanced Password Manager using Django</h2>
-                <h3 class="project-sub-title">A Python-Django Based Project </h3>
-                <p class="project-desc">I made this project when I was learning OpenCV. This project is Amazing.
-                  you can control your systems Volume by just using your hands. It is very easy to execute program, It shows FPS of camera and realtime volume  
-                  of your system. 
-                
-                  I had deployed already but that was temparary deployment.</p>
-                <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Adv_pass_mana" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Adv_pass_mana" class="primary-btn outline external-link"> <span>Preview</span>
-                  
-                  </a>
-                </div>
-              </div>
+            <div class="stat">
+              <span>Tools</span>
+              <strong>Python, Django, Tkinter</strong>
             </div>
-      
-  
-            <div class="item">
-              <div class="right">
-                <h2 class="project-title">Sorting Algorithm GUI</h2>
-            
-                <h3 class="project-sub-title">A Python GUI Project
-                </h3>
-                <p class="project-desc">It is a intermediate level project, where you need knowledge of Sorting Algorithms.
-                I made a GUI using Tkinter, which is a library of Python. GUI have 2 boxes for algos and an array. 
-                Their is a .exe file, you can download in your system and run the file, make sure you have installed python in your system.
-                </p>
-  
-                <div class="buttons">
-                  <a href="https://github.com/BhupeshDewangan/Sorting_Visualization" class="primary-btn">Know More</a>
-                  <a href="https://github.com/BhupeshDewangan/Sorting_Visualization" class="primary-btn outline external-link"> <span>Preview</span>
-                  </a>
-                </div>
-              </div>
+            <div class="stat">
+              <span>Strength</span>
+              <strong>Implementation mindset</strong>
             </div>
-    
-    
-          </div> <!-- end of all-items -->
-        </div> <!-- end of container--->
-      </section>
+            <div class="stat">
+              <span>Goal</span>
+              <strong>Practical portfolio depth</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Selected projects</h2>
+          </div>
+          <p>
+            These project cards keep your original work while improving wording, hierarchy, and overall portfolio presentation.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-globe"></i> Portfolio website</div>
+              <div class="project-index">01</div>
+            </div>
+            <div>
+              <h3 class="project-title">Personal Portfolio</h3>
+              <p class="project-sub-title">Web development project</p>
+            </div>
+            <ul class="project-desc">
+              <li>Built a personal portfolio website to present skills, project work, and professional profile in one place.</li>
+              <li>Designed the site to improve discoverability, create stronger first impressions, and support networking or hiring opportunities.</li>
+              <li>Serves as a central hub for your data, software, and project portfolio presence.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Portfolio Design</span>
+            </div>
+            <div class="card-actions">
+              <a href="./index.html" class="btn btn-primary">
+                <i class="fa-solid fa-circle-info"></i> Know more
+              </a>
+              <a href="./index.html" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-lock"></i> Django application</div>
+              <div class="project-index">02</div>
+            </div>
+            <div>
+              <h3 class="project-title">Advanced Password Manager using Django</h3>
+              <p class="project-sub-title">Python and Django based project</p>
+            </div>
+            <ul class="project-desc">
+              <li>Built a password manager application using Django to explore backend logic, authentication flow, and secure data handling concepts.</li>
+              <li>Used the project to deepen hands-on understanding of Python web development and structured application building.</li>
+              <li>The temporary deployment is no longer live, but the source code remains an important part of your software portfolio.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Python</span><span>Django</span><span>Web App</span><span>Authentication</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Adv_pass_mana" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Adv_pass_mana" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <div class="project-kicker"><i class="fa-solid fa-arrow-down-wide-short"></i> Algorithm visualization</div>
+              <div class="project-index">03</div>
+            </div>
+            <div>
+              <h3 class="project-title">Sorting Algorithm GUI</h3>
+              <p class="project-sub-title">Python GUI project with Tkinter</p>
+            </div>
+            <ul class="project-desc">
+              <li>Created an intermediate-level GUI application for visualizing sorting algorithms and their behavior on arrays.</li>
+              <li>Built the interface in Tkinter with controls for algorithm selection and array interaction.</li>
+              <li>Packaged the project with an executable workflow so it can be run locally as a desktop-style learning tool.</li>
+            </ul>
+            <div class="tech-stack">
+              <span>Python</span><span>Tkinter</span><span>Algorithms</span><span>GUI</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/BhupeshDewangan/Sorting_Visualization" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i> Know more
+              </a>
+              <a href="https://github.com/BhupeshDewangan/Sorting_Visualization" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Preview
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+<script>
+  const root = document.documentElement;
+  const toggle = document.querySelector('[data-theme-toggle]');
+  
+  // Changed: Always default to 'light' instead of checking system preferences
+  let theme = 'light';
+
+  function setTheme(mode) {
+    theme = mode;
+    root.setAttribute('data-theme', mode);
+    toggle.innerHTML = mode === 'light'
+      ? '<i class="fa-regular fa-sun"></i>'
+      : '<i class="fa-regular fa-moon"></i>';
+    toggle.setAttribute('aria-label', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  setTheme(theme);
+  toggle.addEventListener('click', () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

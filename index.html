@@ -1,355 +1,859 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Portfolio </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhupesh Dewangan | Data Analyst Portfolio</title>
+  <meta name="description" content="Bhupesh Dewangan is a data analyst and aspiring data scientist building analytical dashboards, machine learning solutions, and clean data products." />
+  <meta name="theme-color" content="#0b6b6f" />
+  <meta property="og:title" content="Bhupesh Dewangan | Data Analyst Portfolio" />
+  <meta property="og:description" content="Portfolio of Bhupesh Dewangan featuring analytics, machine learning, and data-focused projects." />
+  <meta property="og:type" content="website" />
 
-  <!-- <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"> -->
-  <link rel="shortcut icon" href="/iconsportfolio.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <style>
+    :root,[data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-hero: clamp(3rem, 0.5rem + 7vw, 6rem);
 
-   <!-- Fonts -->
-  
-      <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Asap Condensed' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Donegal One' rel='stylesheet'>
-      <link href='https://fonts.googleapis.com/css?family=Gelasio' rel='stylesheet'>
-  
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+      --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
+      --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
 
-      <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
-    
-       <!-- Font Awesome icons -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous"
-  />
+      --color-bg: #f7f6f2;
+      --color-bg-gradient-end: #ffffff;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #ffffff;
+      --color-surface-offset: #efece6;
+      --color-border: #d7d2ca;
+      --color-border-muted: rgba(0,0,0,0.08);
+      --color-text: #1f221f;
+      --color-text-muted: #666b66;
+      --color-text-faint: #959a94;
+      --color-primary: #0b6b6f;
+      --color-primary-hover: #084f53;
+      --color-primary-highlight: #d5e5e4;
+      --color-navbar-bg: rgba(247,246,242,0.86);
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 24px rgba(11, 36, 40, 0.08);
+      --shadow-lg: 0 24px 50px rgba(11, 36, 40, 0.12);
 
+      --radius-sm: 0.5rem;
+      --radius-md: 0.875rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --radius-full: 9999px;
+
+      --content-default: 1120px;
+      --transition: 180ms cubic-bezier(0.16,1,0.3,1);
+
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+      --font-display: 'Boska', Georgia, serif;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #151614;
+      --color-bg-gradient-end: #1a1c1a;
+      --color-surface: #1b1d1b;
+      --color-surface-2: #202321;
+      --color-surface-offset: #252927;
+      --color-border: #343936;
+      --color-border-muted: rgba(255,255,255,0.08);
+      --color-text: #edf0ec;
+      --color-text-muted: #b3b9b2;
+      --color-text-faint: #80867f;
+      --color-primary: #69aeb2;
+      --color-primary-hover: #8bc4c7;
+      --color-primary-highlight: #223536;
+      --color-navbar-bg: rgba(21,22,20,0.86);
+      
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+      --shadow-md: 0 10px 24px rgba(0,0,0,0.28);
+      --shadow-lg: 0 24px 50px rgba(0,0,0,0.35);
+    }
+
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;text-size-adjust:none;-webkit-font-smoothing:antialiased;scroll-padding-top:6rem}
+    body{
+      font-family:var(--font-body);
+      font-size:var(--text-base);
+      line-height:1.6;
+      background:
+        radial-gradient(circle at top right, rgba(11,107,111,0.08), transparent 30%),
+        linear-gradient(180deg, var(--color-bg), var(--color-bg-gradient-end));
+      color:var(--color-text);
+      min-height:100vh
+    }
+    img,svg{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit;color:inherit}
+    button{cursor:pointer;border:none;background:none}
+    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+
+    .skip-link{
+      position:absolute;left:1rem;top:-3rem;background:var(--color-primary);color:#fff;
+      padding:0.75rem 1rem;border-radius:999px;z-index:100
+    }
+    .skip-link:focus{top:1rem}
+
+    .container{width:min(calc(100% - 2rem), var(--content-default));margin-inline:auto}
+    .header{
+      position:sticky;top:0;z-index:50;background:var(--color-navbar-bg);
+      backdrop-filter:blur(16px);border-bottom:1px solid var(--color-border-muted)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:1rem}
+    .brand{display:flex;align-items:center;gap:0.75rem;font-weight:700}
+    .brand-mark{
+      width:2.5rem;height:2.5rem;border-radius:0.85rem;background:linear-gradient(135deg,var(--color-primary),#4fb8bb);
+      display:grid;place-items:center;color:white;box-shadow:var(--shadow-md)
+    }
+    .brand-name{display:flex;flex-direction:column;line-height:1.05}
+    .brand-name span:first-child{font-size:var(--text-sm)}
+    .brand-name span:last-child{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500}
+
+    .nav-links{display:flex;align-items:center;gap:1rem;list-style:none}
+    .nav-links a{
+      font-size:var(--text-sm);color:var(--color-text-muted);padding:0.6rem 0.8rem;border-radius:999px
+    }
+    .nav-links a:hover,.nav-links a.active{
+      color:var(--color-text);background:var(--color-primary-highlight)
+    }
+
+    .nav-actions{display:flex;align-items:center;gap:0.75rem}
+    .theme-toggle,.menu-toggle{
+      width:2.75rem;height:2.75rem;border-radius:999px;display:grid;place-items:center;
+      background:var(--color-surface);border:1px solid var(--color-border-muted);box-shadow:var(--shadow-sm)
+    }
+    .menu-toggle{display:none}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:0.65rem;
+      padding:0.95rem 1.25rem;border-radius:999px;font-size:var(--text-sm);font-weight:700;
+      transition:transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition)
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--color-primary);color:var(--color-bg-gradient-end);box-shadow:var(--shadow-md)}
+    .btn-primary:hover{background:var(--color-primary-hover)}
+    .btn-secondary{background:var(--color-surface);border:1px solid var(--color-border-muted)}
+
+    main section{padding-block:clamp(4rem, 10vw, 6rem)}
+    .hero{min-height:calc(100vh - 5rem);display:grid;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 0.85rem;background:var(--color-primary-highlight);
+      color:var(--color-primary);border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:0.04em;text-transform:uppercase
+    }
+    h1{
+      font-family:var(--font-display);font-size:var(--text-hero);line-height:0.95;max-width:10ch;
+      letter-spacing:-0.03em;margin-top:1.25rem
+    }
+    .hero p{margin-top:1.25rem;max-width:62ch;color:var(--color-text-muted)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+    .hero-meta{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:1rem;margin-top:2.5rem}
+    .stat{
+      padding:1rem;background:var(--color-surface);border:1px solid var(--color-border-muted);border-radius:1.25rem
+    }
+    .stat strong{display:block;font-size:var(--text-lg)}
+    .stat span{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.05em}
+
+    .hero-card{
+      background:linear-gradient(180deg, var(--color-surface-2), var(--color-surface));
+      border:1px solid var(--color-border-muted);border-radius:1.75rem;padding:1.5rem;
+      box-shadow:var(--shadow-lg);position:relative;overflow:hidden
+    }
+    .portrait{
+      aspect-ratio:4/4.5;border-radius:1.25rem;
+      background:linear-gradient(160deg, rgba(11,107,111,0.22), var(--color-surface-offset));
+      display:grid;place-items:end;padding:1.5rem
+    }
+    .portrait-card{
+      background:var(--color-surface-2);border:1px solid var(--color-border-muted);padding:1rem;border-radius:1.25rem;
+      backdrop-filter:blur(8px);width:100%
+    }
+    .portrait-card h2{font-size:var(--text-lg);margin-bottom:0.5rem}
+    .portrait-card p{font-size:var(--text-sm);color:var(--color-text-muted)}
+
+    .section-head{
+      display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2.5rem
+    }
+    .section-head h2{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1}
+    .section-head p{color:var(--color-text-muted);max-width:56ch}
+
+    .grid-2{display:grid;grid-template-columns:0.95fr 1.05fr;gap:2rem}
+    .panel{
+      background:var(--color-surface);border:1px solid var(--color-border);
+      border-radius:1.75rem;padding:2rem;box-shadow:var(--shadow-md)
+    }
+    .panel h3{font-size:var(--text-lg);margin-bottom:0.75rem}
+    .muted{color:var(--color-text-muted)}
+    .tag-row,.chip-list{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.25rem}
+    .chip{
+      padding:0.65rem 0.9rem;background:var(--color-primary-highlight);border:1px solid rgba(11,107,111,0.18);
+      color:var(--color-text);border-radius:999px;font-size:var(--text-xs);font-weight:700
+    }
+
+    .timeline{display:grid;gap:1rem}
+    .timeline-item{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:flex-start}
+    .dot{
+      width:0.8rem;height:0.8rem;border-radius:50%;background:var(--color-primary);margin-top:0.5rem;
+      box-shadow:0 0 0 6px rgba(11,107,111,0.14)
+    }
+
+    .experience-list{
+      display:grid;
+      gap:1.25rem;
+    }
+    .experience-card{
+      background:linear-gradient(180deg, var(--color-surface), var(--color-surface-offset));
+      border:1px solid var(--color-border-muted);
+      border-radius:1.6rem;
+      padding:1.5rem;
+      box-shadow:var(--shadow-md);
+    }
+    .experience-top{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:flex-start;
+      margin-bottom:1rem;
+      flex-wrap:wrap;
+    }
+    .experience-role{
+      display:grid;
+      gap:0.3rem;
+    }
+    .experience-role h3{
+      font-size:var(--text-lg);
+      margin:0;
+    }
+    .experience-role p{
+      color:var(--color-text-muted);
+      font-size:var(--text-sm);
+      margin:0;
+    }
+    .experience-date{
+      padding:0.5rem 0.8rem;
+      border-radius:999px;
+      background:var(--color-surface-2);
+      border:1px solid var(--color-border-muted);
+      font-size:var(--text-xs);
+      font-weight:700;
+      color:var(--color-text-muted);
+      white-space:nowrap;
+    }
+    .experience-points{
+      display:grid;
+      gap:0.85rem;
+      list-style:none;
+      margin-top:1rem;
+    }
+    .experience-points li{
+      position:relative;
+      padding-left:1.1rem;
+      color:var(--color-text-muted);
+    }
+    .experience-points li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0.72rem;
+      width:0.42rem;
+      height:0.42rem;
+      border-radius:50%;
+      background:var(--color-primary);
+    }
+
+    .skills-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+    .skill-card{
+      padding:1.25rem;background:var(--color-surface);border-radius:1.25rem;border:1px solid var(--color-border-muted);
+      min-height:10rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow-sm)
+    }
+    .skill-card i{font-size:1.6rem;color:var(--color-primary)}
+    .skill-card h3{font-size:var(--text-base);margin-top:1rem}
+    .skill-card p{font-size:var(--text-sm);color:var(--color-text-muted)}
+
+    .services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+    .service-card{
+      background:linear-gradient(180deg, var(--color-surface-2), var(--color-surface));
+      border:1px solid var(--color-border-muted);border-radius:1.5rem;padding:2rem;box-shadow:var(--shadow-md);
+      display:flex;gap:1.5rem;align-items:flex-start
+    }
+    .service-icon{
+      width:3.25rem;height:3.25rem;min-width:3.25rem;border-radius:1rem;background:var(--color-primary-highlight);
+      color:var(--color-primary);display:grid;place-items:center;font-size:1.4rem
+    }
+    .service-body h3{font-size:var(--text-lg);margin-bottom:0.5rem}
+    .service-body p{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:1rem}
+    .service-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+    .service-tag{font-size:0.7rem;font-weight:700;padding:0.3rem 0.6rem;background:var(--color-surface-offset);border-radius:999px;color:var(--color-text-muted)}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+    .project-card{
+      background:linear-gradient(180deg, var(--color-surface), var(--color-surface-offset));
+      border-radius:1.75rem;padding:1.5rem;border:1px solid var(--color-border-muted);
+      box-shadow:var(--shadow-md);display:flex;flex-direction:column
+    }
+    .project-card .kicker{
+      font-size:var(--text-xs);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-primary);margin-bottom:1rem
+    }
+    .project-card p{color:var(--color-text-muted);margin-top:0.75rem}
+    .project-card ul{list-style:none;display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.25rem}
+    .project-card li{
+      font-size:var(--text-xs);padding:0.45rem 0.7rem;border-radius:999px;background:var(--color-surface-2);border:1px solid var(--color-border-muted)
+    }
+    .project-card .actions{display:flex;gap:0.75rem;margin-top:auto;padding-top:1.5rem}
+
+    .highlight{display:grid;grid-template-columns:1.1fr 0.9fr;gap:2rem}
+    .quote-card{
+      background:linear-gradient(180deg, rgba(11,107,111,0.12), var(--color-surface));
+      border-radius:1.75rem;padding:2rem;border:1px solid rgba(11,107,111,0.14);box-shadow:var(--shadow-md)
+    }
+    blockquote{font-family:var(--font-display);font-size:var(--text-xl);line-height:1.05;max-width:12ch}
+
+    .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:1.5rem}
+    .contact-list{display:grid;gap:1rem;margin-top:1.25rem}
+    .contact-item{
+      display:flex;gap:1rem;align-items:flex-start;padding:1rem;background:var(--color-surface-2);
+      border-radius:1.25rem;border:1px solid var(--color-border-muted)
+    }
+    .contact-item i{
+      width:2.5rem;height:2.5rem;display:grid;place-items:center;background:var(--color-primary-highlight);
+      color:var(--color-primary);border-radius:50%
+    }
+
+    form{display:grid;gap:1rem}
+    .field{display:grid;gap:0.5rem}
+    label{font-size:var(--text-sm);font-weight:700}
+    input,textarea{
+      width:100%;padding:1rem;border-radius:0.875rem;border:1px solid var(--color-border);background:var(--color-surface-2)
+    }
+    textarea{min-height:9rem;resize:vertical}
+
+    .footer{padding:2rem 0 3rem;border-top:1px solid var(--color-border-muted)}
+    .footer-row{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
+    .footer small{color:var(--color-text-muted)}
+    .socials{display:flex;gap:0.75rem;list-style:none}
+    .socials a{
+      width:2.75rem;height:2.75rem;border-radius:50%;display:grid;place-items:center;
+      background:var(--color-surface);border:1px solid var(--color-border-muted)
+    }
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity 600ms cubic-bezier(0.16,1,0.3,1),transform 600ms cubic-bezier(0.16,1,0.3,1)}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media (max-width: 980px){
+      .hero-grid,.grid-2,.highlight,.contact-grid,.skills-grid,.services-grid{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr}
+      .hero{min-height:auto;padding-top:2rem}
+    }
+
+    @media (max-width: 760px){
+      .menu-toggle{display:grid}
+      .nav-links{
+        position:absolute;left:1rem;right:1rem;top:calc(100% + 0.5rem);padding:1rem;background:var(--color-surface);
+        border:1px solid var(--color-border-muted);border-radius:1.75rem;box-shadow:var(--shadow-lg);
+        display:none;flex-direction:column;align-items:stretch
+      }
+      .nav-links.open{display:flex}
+      .nav-links a{padding:0.9rem 1rem}
+      .nav .btn-primary{display:none}
+      .hero-grid,.grid-2,.highlight,.contact-grid,.skills-grid,.hero-meta{grid-template-columns:1fr}
+      h1{max-width:12ch}
+      .section-head{align-items:start;flex-direction:column}
+      .experience-top{flex-direction:column;align-items:flex-start}
+      .service-card{flex-direction:column;gap:1rem}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn:hover{transform:none}
+    }
+  </style>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div id = "preloader"> </div>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Bhupesh Dewangan home">
+        <div class="brand-mark" aria-hidden="true">BD</div>
+        <div class="brand-name">
+          <span>Bhupesh Dewangan</span>
+          <span>Data Analyst · Data Science Portfolio</span>
+        </div>
+      </a>
 
+      <nav aria-label="Primary">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <!-- nav -->
-        
-        <nav class="nav-container padd-15" id="nav">
-            
-            <!-- nav menu -->
-            <div class="nav-menu" id="nav-menu">
-                <!-- nav list -->
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active-link"><i class="hey fas fa-home"></i><p>Home</p></a>
-                    </li>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a class="btn btn-primary" href="#projects">View work</a>
+      </div>
+    </div>
+  </header>
 
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link active-link"><i class="hey fas fa-user-circle"></i><p>About</p></a>
-                    </li>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <span class="eyebrow"><i class="fa-solid fa-chart-line"></i> Cisco Certified Data Analyst</span>
+          <h1>Turning raw data into decisions people can trust.</h1>
+          <p>
+            I am Bhupesh Kumar Dewangan, a data analyst and aspiring data scientist focused on analytics, dashboards,
+            machine learning, and business-ready insights. I build clean workflows across Python, SQL, Excel, Power BI,
+            and cloud tools to move from messy data to clear outcomes.
+          </p>
 
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link active-link"><i class="fas fa-code"></i><p>Skills</p></a>
-                    </li>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact"><i class="fa-regular fa-paper-plane"></i> Let’s work together</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/bhupesh-dewangan-7121851ba/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/BhupeshDewangan" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
 
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link active-link"><i class="fas fa-laptop"></i><p>Projects</p></a>
-                    </li>
-                    
-                </ul>
+          <div class="hero-meta">
+            <div class="stat"><span>Focus</span><strong>Analytics & ML</strong></div>
+            <div class="stat"><span>Strength</span><strong>BI + Python</strong></div>
+            <div class="stat"><span>Base</span><strong>Bhilai, India</strong></div>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <div class="portrait">
+            <div class="portrait-card">
+              <h2>What I bring</h2>
+              <p>
+                Structured analysis, practical visual storytelling, and a problem-solving approach shaped by real data
+                projects and interview preparation.
+              </p>
             </div>
-          
-    </header>
+          </div>
+          <div class="tag-row">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">BigQuery</span>
+            <span class="chip">Looker Studio</span>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-
-
-        <!-- About -->
     <section id="about">
-      <div class="container2">
-        <h2 class="section-heading" data-outline="about">About</h2>
-        <div class="wrapper">
-          <div class="left">
-            <div class="card">
-              <div class="img">
-                <img src="/photo_2022-02-17_20-49-22.jpg" alt="bhupesh">
-              </div>
-              <p class="card-desc">I'm a B.Tech Graduate, Computer Science Student from Chhattisgarh, also a Tech Enthusiasm in Machine Learning, Data Science and Data Analytics. I am a Cisco Certified Data Analyst. Currently Sharping My Understanding on Statistic and Deep Learning and Working on Interview Preparation for Data Based Positions. I have solved some DSA problems in Different Plateforms. I believe myself to be totally honored that I will assemble it professionally.</p>
-              <h3 class="card-name">Bhupesh Kumar Dewangan</h3>
-            </div>
-          </div>
-          <div class="right">
-            <p class="subheading">Hi! This is Bhupesh 👋 </p>
-            <h2 class="slogan">Enthusias Data Analyst and Data Scientist</h2>
-            <p class="right-text">I am from Shri Shankaracharya Technical Campus, Bhilai. I have Build many projects in field of Data.
-              My Mostly projects are based on Data Analysis and Data Science.
-              My Skills contain DataBase like SQL and PostgreSQL, Advanced Excel (Pivot Table, Data Visualization, Data Cleaning) and Python(Numpy, Pandas, EDA), 
-              Power BI(DAX, Data Transformation, Charts and Graphs). I have great understanding of ML Algos like Linear and Logistic Regression, Decision Trees, SVM, Ensemble Learning, KNN, KMeans etc. I can perform Data Preprocessing, Data Handling, Data Modeling, Data Visualization, Feature Engineering, Model Selection, Model Evaluation etc.
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>About me</h2></div>
+          <p>This section presents a cleaner and stronger professional summary for recruiters, collaborators, and hiring managers evaluating your portfolio.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="panel reveal">
+            <h3>Profile</h3>
+            <p class="muted">
+              B.Tech graduate in Computer Science with a strong interest in data analysis, machine learning, and statistics.
+              My work centers on transforming raw information into dashboards, stories, and predictive models that support real decisions.
             </p>
-            <div class="buttons">
-              <a href="https://drive.google.com/file/d/1LMJCuBTqROQOh9s0dnd0Bp-wkn0HD7d7/view?usp=sharing" target="_blank" class="primary-btn" download=""> <span id="dbtn"> Download Data Analyst Resume </span></a>
-              <a href="https://drive.google.com/file/d/176PkianLpo803qvToM7tygeI7X-k9TtF/view?usp=sharing" target="_blank" class="primary-btn" download=""> <span id="dbtn"> Download Data Science Resume </span></a>
-              <a href="https://www.linkedin.com/in/bhupesh-dewangan-7121851ba/" target="_blank" class="primary-btn outline">Linkedin</a>
+            <p class="muted" style="margin-top:1rem;">
+              I am comfortable working with data cleaning, exploratory analysis, feature engineering, model selection, evaluation,
+              and visualization. I also bring a builder mindset from web development, DSA practice, and project-based learning.
+            </p>
+            <div class="chip-list">
+              <span class="chip">Data storytelling</span>
+              <span class="chip">Business dashboards</span>
+              <span class="chip">Feature engineering</span>
+              <span class="chip">Interview ready projects</span>
             </div>
-          </div>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Current direction</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>Deepening foundations</strong>
+                  <p class="muted">Sharpening statistics, machine learning concepts, and applied analytics thinking.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>Building project depth</strong>
+                  <p class="muted">Creating stronger project narratives around SQL, Excel, BI, Python, web scraping, and ML workflows.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>Career focus</strong>
+                  <p class="muted">Preparing for data analyst and data science roles with portfolio-ready case studies and cleaner presentation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions" style="margin-top:2rem;">
+              <a class="btn btn-primary" href="https://drive.google.com/file/d/1TuYuz1ORE-Cc458Kc6iOCwKGscPEsPp2/view?usp=sharing" target="_blank" rel="noopener noreferrer">Data Analyst Resume</a>
+              <a class="btn btn-secondary" href="https://drive.google.com/file/d/1kXOTdZv35zGnq3Mf2dFQxUcPZJp1qw0x/view?usp=sharing" target="_blank" rel="noopener noreferrer">Data Science Resume</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Work experience</h2></div>
+          <p>This section adds real-world delivery, product impact, and engineering depth to your profile so your portfolio reflects both project work and professional execution.</p>
+        </div>
 
+        <div class="experience-list">
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <div class="experience-role">
+                <h3>Python Web Developer</h3>
+                <p>Arosys Technologies</p>
+              </div>
+              <span class="experience-date">Oct 2025 – Present</span>
+            </div>
+            <ul class="experience-points">
+              <li>Reduced report generation time by 70% by automating complex Excel-based workflows using Python and Django, and applied multithreading to parallelize heavy data processing for a US-based client product.</li>
+              <li>Improved information accessibility and engagement by developing a RAG-based AI chatbot using web scraping, vector embeddings, and LLM APIs to deliver context-aware answers from dynamic web content.</li>
+              <li>Increased application reliability and scalability by containerizing the full application with Docker and deploying it on GCP to support concurrent users with stable production-like performance.</li>
+              <li>Enhanced backend scalability and modularity by designing RESTful APIs with Django, enabling seamless frontend integration and structured data exchange across multiple application components.</li>
+            </ul>
+          </article>
 
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <div class="experience-role">
+                <h3>Data Analyst</h3>
+                <p>Riverhouse Technologies</p>
+              </div>
+              <span class="experience-date">Nov 2024 – Oct 2025</span>
+            </div>
+            <ul class="experience-points">
+              <li>Drove data-informed UX improvements for the Truleague product by analyzing user behavior with Microsoft Clarity, Hotjar, and UXCam, contributing to a 30% increase in user engagement.</li>
+              <li>Engineered scalable data and AI solutions, including GCP Sentiment Analysis integration and a RAG-based chatbot using Pinecone, OpenAI API, AWS Lambda, and S3.</li>
+              <li>Built Node.js pipelines to process data and automatically sync insights into Google Sheets for smoother operational workflows.</li>
+              <li>Automated analytics and reporting by developing a full-stack AI report generator with Flask and Azure GenAI, reducing report creation time by 70% and enabling faster executive reporting through Redash dashboards.</li>
+            </ul>
+          </article>
 
-
-    <!-- SKILLS -->
-    <section id="skills" class="skills">
-        
-      <div class="container" data-aos="fade-in"> 
-        <!-- <h2 class="text-white main-font">My <span class="text-blue main-font">Skills</span></h2> -->
-        <h2 class="section-heading" data-outline="My Skills" id="skbh" >My Skills</h2>
-
-        <ul class="skills-icons">
-          <li><span class="iconify" data-icon="vscode-icons:file-type-html" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">HTML</span></li>
-
-          <li><span class="iconify" data-icon="vscode-icons:file-type-css" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">CSS</span></li>
-          
-          <li><span class="iconify" data-icon="logos:bootstrap" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Bootstrap</span></li>
-          
-          <li><span class="iconify" data-icon="logos:python" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Python</span></li>
-          
-          <li><span class="iconify" data-icon="logos:django" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Django</span></li>   
-
-          <li><span class="iconify" data-icon="vscode-icons:file-type-cpp3" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">C++</span></li>
-          
-          
-          <!-- ------------- -->
-          
-          
-          <li><span class="iconify" data-icon="tabler:brand-google-big-query" style="color: #457cff"  data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Big Query</span></li>
-          
-          <li><span class="iconify" data-icon="logos:postgresql" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">PostgreSQL</span></li>
-
-          <li><span class="iconify" data-icon="logos:mysql" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">MySQL</span></li>   
-
-          <li><span class="iconify" data-icon="vscode-icons:file-type-excel" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">MS Excel</span></li>
-          
-          <li><span class="iconify" data-icon="logos:microsoft-power-bi" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Power BI</span></li>
-
-          <li><span class="iconify" data-icon="logos:looker-icon" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Looker Studio</span></li>
-
-          <li><span class="iconify" data-icon= "logos:google-cloud" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">GCP</span></li>
-
-          <li><span class="iconify" data-icon= "devicon:jupyter-wordmark" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Notebook</span></li>
-
-          <li><span class="iconify" data-icon= "simple-icons:googlecolab" style="color: #e97512" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Colab</span></li>
-
-          <li><span class="iconify" data-icon= "devicon:keras" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Keras</span></li>
-
-          
-          
-          <!-- -------------- -->
-          <li><span class="iconify" data-icon="logos:opencv" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name"> OpenCV</span></li>  
-          
-          <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Tensorflow</span></li>
-          
-          <li><iconify-icon icon="devicon:scikitlearn" width="90px" height="90px"></iconify-icon><span class="skill-name">Scikit Learn</span></li>
-          
-          <li><iconify-icon icon="logos:streamlit" width="90px" height="90px"></iconify-icon><span class="skill-name">Streamlit</span></li>
-          
-          <li><iconify-icon icon="carbon:machine-learning-model" style="color: hsl(217, 100%, 77%)" width="90px" height="90px"></iconify-icon><span class="skill-name">Machine Learning</span></li>
-          
-          <!-- ------- -->
-          
-          <li><span class="iconify" data-icon="logos:git-icon" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Git</span></li>
-          
-          <li><span class="iconify" data-icon="devicon:github"data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">GitHub</span></li>
-          
-          <li><span class="iconify" data-icon="file-icons:adobe-xd" style="color: #EC407A" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Adobe XD</span></li>
-          
-          <li><span class="iconify" data-icon="logos:figma" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Figma</span></li>
-          
-          <li><iconify-icon icon="devicon:kaggle-wordmark" width="90px" height="90px"></iconify-icon><span class="skill-name">Kaggle</span></li>
-          
-          <li><span class="iconify" data-icon= "devicon:pycharm" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Pycharm</span></li>
-
-          <li><iconify-icon icon="devicon:vscode" width="90px" height="90px"></iconify-icon><span class="skill-name">VS Code</span></li>
-
-          <li><iconify-icon icon="arcticons:openai-chatgpt"  style="color: #000000" width="90" height="90"></iconify-icon><span class="skill-name">Chat GPT</span></li>
-
-          <li><iconify-icon icon="logos:google-gemini" width="90" height="90"></iconify-icon><span class="skill-name">Gemini</span></li>
-          <!-- <li><span class="iconify" data-icon="vscode-icons:folder-type-gcp" data-inline="false" data-width="90px" data-height="90px"></span><span class="skill-name">Google Cloud Platform</span></li> -->
-          
-        </ul>
+          <article class="experience-card reveal">
+            <div class="experience-top">
+              <div class="experience-role">
+                <h3>Technology and Product Intern</h3>
+                <p>Astroanalytics · Remote</p>
+              </div>
+              <span class="experience-date">Aug 2022 – Jan 2023</span>
+            </div>
+            <ul class="experience-points">
+              <li>Built a responsive WordPress website to improve the company’s digital presence and ensure accessibility across devices.</li>
+              <li>Configured and designed landing pages in Systeme.io and MailerLite, optimizing email automation workflows for targeted campaigns and lead capture.</li>
+              <li>Created Figma designs for code-based website implementation, contributing to both product presentation and marketing execution.</li>
+            </ul>
+          </article>
+        </div>
       </div>
-      
     </section>
 
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Skills stack</h2></div>
+          <p>Your original skills list was long but visually flat. This version groups it into clear capability areas that scan faster and look more professional.</p>
+        </div>
 
+        <div class="skills-grid">
+          <article class="skill-card reveal"><i class="fa-solid fa-database"></i><h3>Data analysis</h3><p>SQL, PostgreSQL, MySQL, BigQuery, Excel, data cleaning, transformations, and structured querying.</p></article>
+          <article class="skill-card reveal"><i class="fa-solid fa-chart-simple"></i><h3>Business intelligence</h3><p>Power BI, Looker Studio, dashboards, KPI tracking, visual storytelling, and reporting layouts.</p></article>
+          <article class="skill-card reveal"><i class="fa-brands fa-python"></i><h3>Python ecosystem</h3><p>Pandas, NumPy, EDA, notebooks, Colab, Jupyter, automation, and exploratory workflows.</p></article>
+          <article class="skill-card reveal"><i class="fa-solid fa-brain"></i><h3>Machine learning</h3><p>Regression, trees, SVM, KNN, clustering, ensembles, preprocessing, evaluation, and feature engineering.</p></article>
+          <article class="skill-card reveal"><i class="fa-solid fa-cloud"></i><h3>Cloud & tools</h3><p>GCP, AWS, Docker, Git, GitHub, VS Code, PyCharm, and collaborative development practices.</p></article>
+          <article class="skill-card reveal"><i class="fa-solid fa-window-maximize"></i><h3>Apps & deployment</h3><p>Streamlit, Django, Flask, REST APIs, dashboards, and lightweight analytical application delivery.</p></article>
+          <article class="skill-card reveal"><i class="fa-solid fa-code"></i><h3>Frontend basics</h3><p>HTML, CSS, Bootstrap, better UI structure, and portfolio presentation improvements.</p></article>
+          <article class="skill-card reveal"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>AI-assisted workflow</h3><p>Using modern AI tools carefully for ideation, debugging, productivity, and faster project iteration.</p></article>
+        </div>
+      </div>
+    </section>
 
-      <!-- Projects -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Freelance services</h2></div>
+          <p>Available for freelance contracts, consulting roles, and custom data product delivery. Here is how we can work together.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+            <div class="service-body">
+              <h3>Backend Development</h3>
+              <p>Building secure, scalable web APIs and backend workflows using Django and Flask. Expert in multithreading data processing, custom web scrapers, and integrating RAG architectures or LLM APIs into stable products.</p>
+              <div class="service-tags">
+                <span class="service-tag">Python</span><span class="service-tag">Django</span><span class="service-tag">Flask</span><span class="service-tag">REST APIs</span><span class="service-tag">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="service-body">
+              <h3>Data Analytics & BI</h3>
+              <p>Transforming complex enterprise datasets into simple, intuitive operational data stories. Crafting automated Power BI and Looker Studio dashboards that monitor core KPIs, track conversions, and point out optimization areas.</p>
+              <div class="service-tags">
+                <span class="service-tag">Power BI</span><span class="service-tag">Looker Studio</span><span class="service-tag">EDA</span><span class="service-tag">Data Storytelling</span><span class="service-tag">KPIs</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-file-excel"></i></div>
+            <div class="service-body">
+              <h3>Excel Automation</h3>
+              <p>Eliminating slow, error-prone manual calculations by replacing spreadsheets with automated tools. Writing high-speed script layers that read, format, update, and export massive multi-sheet business pipelines instantly.</p>
+              <div class="service-tags">
+                <span class="service-tag">Advanced Excel</span><span class="service-tag">Automation</span><span class="service-tag">Data Cleaning</span><span class="service-tag">Reporting Pipelines</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+            <div class="service-body">
+              <h3>SQL & Database Architecture</h3>
+              <p>Writing performant database scripts to clean up unorganized raw data models. Constructing optimized queries, table joins, views, and index solutions across SQL environments for fast execution and reporting ready delivery.</p>
+              <div class="service-tags">
+                <span class="service-tag">SQL</span><span class="service-tag">PostgreSQL</span><span class="service-tag">MySQL</span><span class="service-tag">BigQuery</span><span class="service-tag">Query Tuning</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="projects">
       <div class="container">
-        <h2 class="section-heading" data-outline="Projects" id="pbot">Projects</h2>
-        <div class="all-items">
-  
+        <div class="section-head reveal">
+          <div><h2>Selected projects</h2></div>
+          <p>I kept your original categories, but reframed them as stronger portfolio cards with clearer value and cleaner calls to action.</p>
+        </div>
 
-          <div class="item">
-            <div class="right">
-              <h2 class="project-title">Data Analyst Projects</h2>
-              <h3 class="project-sub-title">SQL | EXCEL | POWER BI | PYTHON | WEB SCRAPING </h3>
-              <p class="project-desc"> "Explore my data analyst projects showcasing proficiency in SQL, Excel, Power BI, Python, BigQuery, and Looker Studio. From data extraction and cleaning to visualization and analysis, each project demonstrates my skills in transforming raw data into actionable insights using a variety of powerful tools and platforms."  </p>
-              <div class="buttons">
-                <a href="./Data_Analyst_Projects.html" target="_blank" class="primary-btn">Show Projects</a>
-                <!-- <a href="./Data_Analyst_Projects.html" target="_blank" class="primary-btn outline external-link"> <span>Preview</span> -->
-                
-                </a>
-              </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <span class="kicker">Analytics</span>
+            <h3>Data Analyst Projects</h3>
+            <p>Projects focused on SQL, Excel, Power BI, Python, web scraping, BigQuery, and Looker Studio. Designed to show how you extract, clean, model, and communicate insights from raw data.</p>
+            <ul>
+              <li>SQL</li><li>Excel</li><li>Power BI</li><li>Python</li><li>BigQuery</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="./Data_Analyst_Projects.html" target="_blank" rel="noopener noreferrer">Show projects</a>
             </div>
-          </div>
+          </article>
 
-          <div class="item">
-            <div class="right">
-              <h2 class="project-title">Data Science and Machine Learning Project</h2>
-              <h3 class="project-sub-title">PYTHON | STREAMLIT | ML ALGORITHMS </h3>
-              <p class="project-desc"> "Dive into my data science and machine learning projects featuring Python, Streamlit, and a range of ML algorithms. From exploratory data analysis to model building and deployment, each project highlights my expertise in leveraging technology to solve complex problems and deliver valuable insights through interactive applications." </p>
-              <div class="buttons">
-                <a href="./ML_DS.html" target="_blank" class="primary-btn">Show Projects</a>
-                <!-- <a href="./ML_DS.html" target="_blank" class="primary-btn outline external-link"> <span>Preview</span> -->
-                  
-                </a>
-              </div>
+          <article class="project-card reveal">
+            <span class="kicker">Machine learning</span>
+            <h3>Data Science & ML Projects</h3>
+            <p>Projects built with Python, Streamlit, and core machine learning algorithms, covering EDA, modeling, evaluation, and interactive application delivery.</p>
+            <ul>
+              <li>Python</li><li>Streamlit</li><li>Scikit-learn</li><li>Keras</li><li>TensorFlow</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="./ML_DS.html" target="_blank" rel="noopener noreferrer">Show projects</a>
             </div>
-          </div>
+          </article>
 
-          <div class="item">
-            <div class="right">
-              <h2 class="project-title">Software Engineering Projects</h2>
-              <h3 class="project-sub-title">WEB DEVELOPMENT | DSA </h3>
-              <p class="project-desc"> "Explore my software engineering projects showcasing expertise in web development and data structures/algorithms. From dynamic web applications to efficient algorithmic solutions, each project highlights my ability to create robust software solutions that meet both functional and performance requirements." </p>
-              <div class="buttons">
-                <a href="./Software_Engg.html" target="_blank" class="primary-btn">Show Projects</a>
-                <!-- <a href="./Software_Engg.html" target="_blank" class="primary-btn outline external-link"> <span>Preview</span> -->
-              
-                </a>
-              </div>
+          <article class="project-card reveal">
+            <span class="kicker">Engineering</span>
+            <h3>Software Engineering Projects</h3>
+            <p>Web development and DSA-based work that shows coding discipline, structured thinking, and the ability to build software beyond notebooks and dashboards.</p>
+            <ul>
+              <li>HTML/CSS</li><li>Django</li><li>C++</li><li>DSA</li><li>Problem solving</li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-primary" href="./Software_Engg.html" target="_blank" rel="noopener noreferrer">Show projects</a>
             </div>
-          </div>
-
-
-  
-          
-  
-        </div> <!-- end of all-items -->
-      </div> <!-- end of container--->
+          </article>
+        </div>
+      </div>
     </section>
 
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2>Contact</h2></div>
+          <p>A portfolio contact area should be simple and direct. I kept your form idea, but made the section cleaner and more trustworthy.</p>
+        </div>
 
-    <!-- contact section starts -->
+        <div class="contact-grid">
+          <article class="panel reveal">
+            <h3>Reach me directly</h3>
+            <p class="muted">For internships, analyst roles, collaborations, or project discussions, these are the fastest ways to connect.</p>
 
-    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+            <div class="contact-list">
+              <div class="contact-item">
+                <i class="fa-regular fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <p class="muted"><a href="mailto:bhupeshdewangan2003@gmail.com">bhupeshdewangan2003@gmail.com</a></p>
+                </div>
+              </div>
 
-<section class="contact" id="contact">
-  
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="/contact1.png" alt="">
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <p class="muted"><a href="tel:+918319341550">+91 8319341550</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Location</strong>
+                  <p class="muted">Bhilai, Chhattisgarh, India</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel reveal">
+            <h3>Quick message</h3>
+            <form action="https://forms.office.com/r/yEcQgmaKQT" method="get" target="_blank">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Your email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Optional">
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about the role, project, or collaboration." required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit"><i class="fa-regular fa-paper-plane"></i> Submit message</button>
+            </form>
+          </article>
+        </div>
       </div>
-    <form action="https://forms.office.com/r/yEcQgmaKQT">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="field message">
-        <textarea placeholder="Message" name="message" required class="textarea" ></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
+    </section>
+  </main>
 
-        <div class="button-area">
-          <button type="submit">
-            Submit <i class="fa fa-paper-plane"></i></button>
-        </div>
-
-        </div>
-      
-    </form>
-  </div>
-  </div>
-</section>
-
-
-  <!-- Footer Section -->
-  <section id="footer">
-    <div class="container">
-      <footer>
-        <div class="col-3">
-          <h2 class="column-heading">Contact<br>Info</h2>
-          <ul>
-            <li><a href="#">bhupeshdewangan2003@gmail.com</a></li>
-            <li><a href="#">8319341550</a></li>
-            <li><a href="#">Bhilai, Chhattisgarh</a></li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <h2 class="column-heading">Social<br>Links</h2>
-          <ul>
-            <li><a href="https://github.com/BhupeshDewangan" target="_blank" class = "foota">
-                <i class="fab fa-github fa-2x Icon"></i>
-            </a></li>
-
-            <li><a href="https://www.linkedin.com/in/bhupesh-dewangan-7121851ba/"  target="_blank" class = "foota">
-                <i class="fab fa-linkedin fa-2x Icon"></i>
-            </a></li>
-
-            <li><a href="https://www.instagram.com/bhupesh13hero/" target="_blank" class = "foota">
-          <i class="fab fa-instagram fa-2x Icon"></i>
-        </a></li>
-            <li><a href= "mailto: bhupeshdewangan2003@gmail.com" target="_blank" class = "foota">
-                <i class="fa fa-envelope fa-2x Icon" aria-hidden="true"></i>
-              </a></li>
-          </ul>
-        </div>
-      </footer>
+  <footer class="footer">
+    <div class="container footer-row">
+      <small>© 2026 Bhupesh Dewangan. Designed for a sharper, more professional portfolio presence.</small>
+      <ul class="socials" aria-label="Social links">
+        <li><a href="https://github.com/BhupeshDewangan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/bhupesh-dewangan-7121851ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.instagram.com/bhupesh13hero/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="mailto:bhupeshdewangan2003@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a></li>
+      </ul>
     </div>
-  </section>
-  <section id="copyright">
-    <div class="container">
-      <p> &copy; Copyright 2024 Bhupesh Dewangan. All right Reserved</p>
-    </div>
-  </section>
-
+  </footer>
 
   <script>
-      var loader = document.getElementById("preloader");
+    const root = document.documentElement;
+    const toggle = document.querySelector('[data-theme-toggle]');
+    let theme = 'light';
 
-      window.addEventListener ( "load",function(){
-      loader.style.display = "none";
-      })
+    function setTheme(mode) {
+      theme = mode;
+      root.setAttribute('data-theme', mode);
+      toggle.innerHTML = mode === 'dark'
+        ? '<i class="fa-regular fa-sun"></i>'
+        : '<i class="fa-regular fa-moon"></i>';
+      toggle.setAttribute('aria-label', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
 
+    setTheme(theme);
+    toggle.addEventListener('click', () => setTheme(theme === 'dark' ? 'light' : 'dark'));
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menuToggle.innerHTML = open
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (menu && menuToggle) {
+          menu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function activateLink() {
+      let current = '';
+      sections.forEach(section => {
+        const top = window.scrollY;
+        const offset = section.offsetTop - 120;
+        const height = section.offsetHeight;
+        if (top >= offset && top < offset + height) current = section.id;
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    }
+
+    activateLink();
+    window.addEventListener('scroll', activateLink, { passive: true });
   </script>
-
-  <script src="script.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
-
 </html>
